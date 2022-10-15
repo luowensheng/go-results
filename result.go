@@ -24,7 +24,7 @@ func GetResult[T any](arr T, err error) *Result[T] {
 // Use this method to check extract the result. 
 func (result *Result[T]) Unwrap() T {
 	if !result.IsOk(){
-       panic("Tried to access a nil value. You should check that the result is ok before accessing the it")
+       panic("Tried to access a nil value. You should check that the result is ok before accessing the it:\n" + result.err.Error())
 	}
 	return result.value
 }
