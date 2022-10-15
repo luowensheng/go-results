@@ -1,3 +1,3 @@
-module github.com/luowensheng/go-results
+module github.com/luowensheng/results
 
 go 1.19
