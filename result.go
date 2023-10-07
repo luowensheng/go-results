@@ -38,6 +38,10 @@ func (result *Result[T]) Unwrap_Or(val T) T {
 	}
 }
 
+func (result *Result[T]) Error() error {
+	return result.err
+}
+
 // Use this method to check if the result's value is not nil 
 func (result *Result[T]) IsOk() bool {
 	return result.err == nil
